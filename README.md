@@ -215,4 +215,120 @@ $
 
 ```bash
 
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        home.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (main)
+$ git add home.html
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (main)
+$ git stash
+Saved working directory and index state WIP on main: 50e3b22 initial commit
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (main)
+$ touch about.html
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (main)
+$ git add about.html
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (main)
+$ git stash
+Saved working directory and index state WIP on main: 50e3b22 initial commit
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (main)
+$ touch team.html
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (main)
+$ git add team.html
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (main)
+$ git stash
+Saved working directory and index state WIP on main: 50e3b22 initial commit
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (main)
+$ git stash list
+stash@{0}: WIP on main: 50e3b22 initial commit
+stash@{1}: WIP on main: 50e3b22 initial commit
+stash@{2}: WIP on main: 50e3b22 initial commit
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (main)
+$ git stash pop stash{1}
+error: stash{1} is not a valid reference
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (main)
+$ git stash pop stash@{1}
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+
+Dropped stash@{1} (252b917f2733944380de9172029db90961a9bf90)
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (main)
+$ git stash list
+stash@{0}: WIP on main: 50e3b22 initial commit
+stash@{1}: WIP on main: 50e3b22 initial commit
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (main)
+$ git stash pop stash@{1}
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   home.html
+
+Dropped stash@{1} (071fbc9e0477b39a3e0f550fbb4a9dac8715e6e9)
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (main)
+$ git commit -m "added about and home pages"
+[main 48b77ce] added about and home pages
+ 2 files changed, 28 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 home.html
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 598 bytes | 598.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To github.com:Iam-Ntwali/Git-Exercise-Solutions.git
+   50e3b22..48b77ce  main -> main
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (main)
+$ git stash list
+stash@{0}: WIP on main: 50e3b22 initial commit
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (main)
+$ git stash pop
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team.html
+
+Dropped refs/stash@{0} (b2294ef53d888fe13d810d6990bde2536d041f35)
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (main)
+$ git reset --hard
+HEAD is now at 48b77ce added about and home pages
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (main)
+$
 ```
