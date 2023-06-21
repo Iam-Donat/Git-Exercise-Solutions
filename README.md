@@ -433,5 +433,211 @@ To github.com:Iam-Ntwali/Git-Exercises.git
 ### Exercise 1
 
 ```bash
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (main)
+$ git switch -c ft/team-page
+Switched to a new branch 'ft/team-page'
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/team-page)
+$ touch team.html
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/team-page)
+$ git add .
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/team-page)
+$ git commit -m "created team page"
+[ft/team-page 4f9332a] created team page
+ 1 file changed, 14 insertions(+)
+ create mode 100644 team.html
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/team-page)
+$ git push
+fatal: The current branch ft/team-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/team-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/team-page)
+$ git push --set-upstream origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 458 bytes | 458.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/Iam-Ntwali/Git-Exercises/pull/new/ft/team-pag
+remote:
+To github.com:Iam-Ntwali/Git-Exercises.git
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/team-page)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (main)
+$ git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/contact-page)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/team-page)
+$ git log
+commit 4f9332a09c0217f77b62ae5aad102f7ffcffd857 (HEAD -> ft/team-page, origin/ft/team-page)
+Author: Iam-Ntwali <64748718+Iam-Ntwali@users.noreply.github.com>
+Date:   Wed Jun 21 19:07:01 2023 +0200
+
+    created team page
+
+commit acb083bf5dae6ca00e4d69b43fbab749b1487109 (origin/main, main, ft/contact-page)
+Author: Iam-Ntwali <64748718+Iam-Ntwali@users.noreply.github.com>
+Date:   Wed Jun 21 18:52:01 2023 +0200
+
+    added new changes service page on main
+
+commit be8d4c85fa69f481f5668b35973eb0e86197d0ab
+Merge: cffd8f8 ca10312
+Author: IYADUKUNZE Emile <80049630+emilenfc@users.noreply.github.com>
+Date:   Wed Jun 21 18:06:47 2023 +0200
+
+    Merge pull request #1 from Iam-Ntwali/ft/bundle-2
+
+commit ca103126b34a021b661868f741d172f425e03c43 (origin/ft/bundle-2, ft/bundle-2)
+Author: Iam-Ntwali <64748718+Iam-Ntwali@users.noreply.github.com>
+Date:   Wed Jun 21 17:43:14 2023 +0200
+
+    services.html
+
+commit cb8aeb3d28db5887bd986743fd40cec240925e98 (origin/dev, dev)
+Author: Iam-Ntwali <64748718+Iam-Ntwali@users.noreply.github.com>
+Date:   Wed Jun 21 17:28:16 2023 +0200
+
+    added home and about pages
+
+commit cffd8f8d5047ee066d0155f716234fe9bd1ef663
+Author: Iam-Ntwali <64748718+Iam-Ntwali@users.noreply.github.com>
+Date:   Wed Jun 21 17:13:11 2023 +0200
+
+    initial file
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/team-page)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/contact-page)
+$ git cherry-pick 4f9332a09c0217f77b62ae5aad102f7ffcffd857
+[ft/contact-page 5601d9e] created team page
+ Date: Wed Jun 21 19:07:01 2023 +0200
+ 1 file changed, 14 insertions(+)
+ create mode 100644 team.html
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/contact-page)
+$ git add .
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/contact-page)
+$ git commit -m "Added Contact Page"
+[ft/contact-page 1673b96] Added Contact Page
+ 1 file changed, 14 insertions(+)
+ create mode 100644 contact.html
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/contact-page)
+$ push --set-upstream origin ft/contact-page
+bash: push: command not found
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/contact-page)
+$ git push --set-upstream origin ft/contact-page
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 733 bytes | 733.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/Iam-Ntwali/Git-Exercises/pull/new/ft/contact-page
+remote:
+To github.com:Iam-Ntwali/Git-Exercises.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/contact-page)
+$ git switch -c ft/faq-page
+Switched to a new branch 'ft/faq-page'
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/faq-page)
+$ touch faq.html
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/faq-page)
+$ git add .
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/faq-page)
+$ git commit m- "added new faq page"
+error: pathspec 'm-' did not match any file(s) known to git
+error: pathspec 'added new faq page' did not match any file(s) known to git
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/faq-page)
+$ git commit -m "added new faq page"
+[ft/faq-page 66b40ac] added new faq page
+ 1 file changed, 14 insertions(+)
+ create mode 100644 faq.html
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/faq-page)
+$ git push --set-upstream origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 464 bytes | 464.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/Iam-Ntwali/Git-Exercises/pull/new/ft/faq-page
+remote:
+To github.com:Iam-Ntwali/Git-Exercises.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/faq-page)
+$ git revert 4f9332a09c0217f77b62ae5aad102f7ffcffd857
+[ft/faq-page d79b7b9] Revert "created team page"
+ 1 file changed, 14 deletions(-)
+ delete mode 100644 team.html
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/faq-page)
+$ git status
+On branch ft/faq-page
+Your branch is ahead of 'origin/ft/faq-page' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/faq-page)
+$ git push --set-upstream origin ft/faq-page
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 289 bytes | 289.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:Iam-Ntwali/Git-Exercises.git
+   66b40ac..d79b7b9  ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+```
+### Exercise 2
+
+```bash
 
 ```
