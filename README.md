@@ -404,3 +404,25 @@ branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
 Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (ft/bundle-2)
 $
 ```
+
+### Exercise 2
+
+```bash
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (ft/bundle-2)
+$ git switch main
+Switched to branch 'main'
+M       README.md
+Your branch is behind 'origin/main' by 2 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (main)
+$ git pull
+Updating 3c16a52..852cad0
+Fast-forward
+ services.html | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+ create mode 100644 services.html
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (main)
+$
+```
