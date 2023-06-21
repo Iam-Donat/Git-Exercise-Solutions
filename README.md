@@ -404,3 +404,191 @@ branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
 Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (ft/bundle-2)
 $
 ```
+
+### Exercise 2
+
+```bash
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (ft/bundle-2)
+$ git switch main
+Switched to branch 'main'
+M       README.md
+Your branch is behind 'origin/main' by 2 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (main)
+$ git pull
+Updating 3c16a52..852cad0
+Fast-forward
+ services.html | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+ create mode 100644 services.html
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (main)
+$ git branch ft/service-redesign
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (main)
+$ git switch ft/service-redesign
+Switched to branch 'ft/service-redesign'
+M       README.md
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (ft/service-redesign)
+$ git status
+On branch ft/service-redesign
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+        modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (ft/service-redesign)
+$ git commit -m "new changes in services.html"
+On branch ft/service-redesign
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+        modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (ft/service-redesign)
+$ git add .
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (ft/service-redesign)
+$ git commit -m "new changes in services.html"
+[ft/service-redesign 9d2322f] new changes in services.html
+ 2 files changed, 23 insertions(+)
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (ft/service-redesign)
+$ git push
+fatal: The current branch ft/service-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/service-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (ft/service-redesign)
+$  git push --set-upstream origin ft/service-redesign
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 740 bytes | 740.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/Iam-Ntwali/Git-Exercise-Solutions/pull/new/ft/service-redesign
+remote:
+To github.com:Iam-Ntwali/Git-Exercise-Solutions.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (ft/service-redesign)
+$ git branch main
+fatal: a branch named 'main' already exists
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (ft/service-redesign)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (main)
+$ git add .
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (main)
+$ git push
+Everything up-to-date
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   services.html
+
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (main)
+$ git commit -m "new changes in services.html"
+[main 9ccf49e] new changes in services.html
+ 1 file changed, 1 insertion(+)
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 355 bytes | 355.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:Iam-Ntwali/Git-Exercise-Solutions.git
+   6b6eed6..9ccf49e  main -> main
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (ft/service-redesign)
+$ git merge main
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (ft/service-redesign|MERGING)
+$ git add .
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (ft/service-redesign|MERGING)
+$ git commit
+[ft/service-redesign 4d497a6] Merge branch 'main' into ft/service-redesign
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (ft/service-redesign)
+$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 398 bytes | 398.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:Iam-Ntwali/Git-Exercise-Solutions.git
+   9d2322f..4d497a6  ft/service-redesign -> ft/service-redesign
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (ft/service-redesign)
+$ ^C
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (ft/service-redesign)
+$ git checkout main
+error: Your local changes to the following files would be overwritten by checkout:
+        README.md
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/Git-Exercise-Solutions (main)
+$
+```
