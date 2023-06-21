@@ -1,7 +1,7 @@
 # Git-Exercises-Solution.
 
-This repo contain solutions to Git-Exercises 👌
-<img src="./terminal.gif">
+This readme file contain terminal codes solutions to my Git-Exercises 👌 <br> <br>
+<img src="./terminal.gif" width="400" style="border-radius: 10px">
 
 ## Bundle 1
 
