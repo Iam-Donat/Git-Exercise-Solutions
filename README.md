@@ -1,7 +1,7 @@
 # Git-Exercises-Solution.
 
 This readme file contain terminal codes solutions to my Git-Exercises 👌 <br> <br>
-<img src="./terminal.gif" width="400" style="border-radius: 10px">
+<img src="./terminal.gif" width="400" style="border-radius: 20px; box-shadow: 2px 2px 2px rgba(31, 130, 125, 0.4)">
 
 ## Bundle 1
 
