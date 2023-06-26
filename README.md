@@ -640,4 +640,123 @@ branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
 
 ```bash
 
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/faq-page)
+$ git checkout -b ft/home-page-redisign
+Switched to a new branch 'ft/home-page-redisign'
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/home-page-redisign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (main)
+$ git statut
+git: 'statut' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (main)
+$ git add .
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (main)
+$ git commit -m "deleted unwanted file index.html"
+[main aec7fb8] deleted unwanted file index.html
+ 1 file changed, 14 deletions(-)
+ delete mode 100644 index.html
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (main)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 255 bytes | 255.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:Iam-Ntwali/Git-Exercises.git
+   acb083b..aec7fb8  main -> main
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (main)
+$ git checkout ft/home-page-redesign
+error: pathspec 'ft/home-page-redesign' did not match any file(s) known to git
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (main)
+$ git checkout ft/home-page-redesign
+error: pathspec 'ft/home-page-redesign' did not match any file(s) known to git
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (main)
+$ git checkout ft/home-page-redisign
+Switched to branch 'ft/home-page-redisign'
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/home-page-redisign)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redisign.
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/home-page-redisign)
+$ git status
+On branch ft/home-page-redisign
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/home-page-redisign)
+$ git add .
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/home-page-redisign)
+$ git commit -m "new changes"
+[ft/home-page-redisign de99779] new changes
+ 1 file changed, 1 insertion(+)
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/home-page-redisign)
+$ git push
+fatal: The current branch ft/home-page-redisign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/home-page-redisign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/home-page-redisign)
+$  git push --set-upstream origin ft/home-page-redisign
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (14/14), 1.58 KiB | 64.00 KiB/s, done.
+Total 14 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (7/7), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/home-page-redisign' on GitHub by visiting:
+remote:      https://github.com/Iam-Ntwali/Git-Exercises/pull/new/ft/home-page-redisign
+remote:
+To github.com:Iam-Ntwali/Git-Exercises.git
+ * [new branch]      ft/home-page-redisign -> ft/home-page-redisign
+branch 'ft/home-page-redisign' set up to track 'origin/ft/home-page-redisign'.
+
+```
+
+## Bundle 4 
+
+### Exercise 1
+
+```bash
+
 ```
