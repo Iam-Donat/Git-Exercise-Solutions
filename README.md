@@ -758,5 +758,179 @@ branch 'ft/home-page-redisign' set up to track 'origin/ft/home-page-redisign'.
 ### Exercise 1
 
 ```bash
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/home-page-redisign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (main)
+$ git remote add git-copy git@github.com:Iam-Ntwali/Git-Exercises-Repo-2.git
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (main)
+$ git remote
+git-copy
+origin
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (main)
+$ git add .
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (main)
+$ git commit -m "added some changes"
+[main 30ea116] added some changes
+ 1 file changed, 1 insertion(+)
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (main)
+$ git push origin
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 392 bytes | 392.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:Iam-Ntwali/Git-Exercises.git
+   aec7fb8..30ea116  main -> main
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (main)
+$ git push git-copy
+Enumerating objects: 19, done.
+Counting objects: 100% (19/19), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (18/18), done.
+Writing objects: 100% (19/19), 2.57 KiB | 175.00 KiB/s, done.
+Total 19 (delta 8), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (8/8), done.
+To github.com:Iam-Ntwali/Git-Exercises-Repo-2.git
+ * [new branch]      main -> main
+```
+
+### Exercise 2
+
+```bash 
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (main)
+$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/footer)
+$ git add .
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/footer)
+$ git commit -m "added footer page"
+[ft/footer 3b15f85] added footer page
+ 2 files changed, 15 insertions(+)
+ create mode 100644 footer.html
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/footer)
+$ git status
+On branch ft/footer
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        new page.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/footer)
+$ git add .
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/footer)
+$ git commit -m "added some random page"
+[ft/footer 4ef7d3f] added some random page
+ 1 file changed, 14 insertions(+)
+ create mode 100644 new page.html
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/footer)
+$ git push
+fatal: The current branch ft/footer has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/footer
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/footer)
+$ git push --set-upstream origin ft/footer
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 842 bytes | 842.00 KiB/s, done.
+Total 7 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/Iam-Ntwali/Git-Exercises/pull/new/ft/footer
+remote:
+To github.com:Iam-Ntwali/Git-Exercises.git
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/footer)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (main)
+$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/squashing)
+$ git merge --squash ft/footer
+Updating 30ea116..4ef7d3f
+Fast-forward
+Squash commit -- not updating HEAD
+ footer.html   | 14 ++++++++++++++
+ home.html     |  1 +
+ new page.html | 14 ++++++++++++++
+ 3 files changed, 29 insertions(+)
+ create mode 100644 footer.html
+ create mode 100644 new page.html
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/squashing)
+$ git status
+On branch ft/squashing
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   footer.html
+        modified:   home.html
+        new file:   new page.html
+
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/squashing)
+$ git commit -m "changes squashed from ft/footer branch"
+[ft/squashing b8e07fc] changes squashed from ft/footer branch
+ 3 files changed, 29 insertions(+)
+ create mode 100644 footer.html
+ create mode 100644 new page.html
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-exercises (ft/squashing)
+$ git push origin ft/squashing
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 660 bytes | 660.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/Iam-Ntwali/Git-Exercises/pull/new/ft/squashing
+remote:
+To github.com:Iam-Ntwali/Git-Exercises.git
+ * [new branch]      ft/squashing -> ft/squashing
+```
+
+## Bundle 5
+
+### Exercise 1
+
+```bash
+Done the site is live here 👉🏾 https://iam-ntwali.github.io/Git-Exercises/
+```
+
+### Exercise 2
+
+```bash
 
 ```
