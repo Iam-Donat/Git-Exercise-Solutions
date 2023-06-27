@@ -932,5 +932,56 @@ Done the site is live here 👉🏾 https://iam-ntwali.github.io/Git-Exercises/
 ### Exercise 2
 
 ```bash
+Ntwali@Ntwali-PC MINGW64 ~/Desktop
+$ git clone git@github.com:Iam-Ntwali/git-cafe-exercise.git
+Cloning into 'git-cafe-exercise'...
+remote: Enumerating objects: 107, done.
+remote: Counting objects: 100% (12/12), done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 107 (delta 5), reused 4 (delta 4), pack-reused 95
+Receiving objects: 100% (107/107), 1.95 MiB | 191.00 KiB/s, done.
+Resolving deltas: 100% (5/5), done.
 
+Ntwali@Ntwali-PC MINGW64 ~/Desktop
+$ cd git-cafe-exercise
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-cafe-exercise (main)
+$ code .
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-cafe-exercise (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .vscode/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-cafe-exercise (main)
+$ git add .
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-cafe-exercise (main)
+$ git commit -m "updated index.html"
+[main c988951] updated index.html
+ 2 files changed, 286 insertions(+), 226 deletions(-)
+ create mode 100644 .vscode/settings.json
+
+Ntwali@Ntwali-PC MINGW64 ~/Desktop/git-cafe-exercise (main)
+$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 1.52 KiB | 1.52 MiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:Iam-Ntwali/git-cafe-exercise.git
+   d1d3f9c..c988951  main -> main
 ```
